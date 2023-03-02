@@ -1,4 +1,3 @@
-# scaler_interview_web
 WELCOME PAGE:
 
 ![image](https://user-images.githubusercontent.com/105169175/220977770-a2d6cfae-74ac-4cd8-8e23-f784fb4502b2.png)
