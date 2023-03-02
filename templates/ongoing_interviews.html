@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Main Page</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/ongoing_interviews.css') }}">
+    </head>
+    <body>
+        {% block content %}
+            {%for id in names%}
+            <div class="block">
+                <h1 style="display: inline-block;">MEETING ID: </h1>
+                <h2 style="display: inline-block;">{{id}}</h2><br>
+                <h3 style="display: inline-block;">Start time: </h3> <p style="display: inline-block;">{{timing[id][0]}}</p>
+                <h3 style="display: inline-block;">End time: </h3> <p style="display: inline-block;">{{timing[id][1]}}</p>
+                <h2>Participants:</h2>
+                {%for name in names[id]%}
+                    <h4>{{name}}</h4>
+                {%endfor%}
+                <br><br>
+            {%endfor%}
+            </div>
+        {% endblock content %}
+    </body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Main Page</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/timings.css') }}">
+    </head>
+    <body>
+        <form action="/timings" method="POST">
+            <label>Enter the meeting id you want to delete: <input type="text" name="start"></label>
+            <input type="submit">
+        </form>
+    </body>
+</html>

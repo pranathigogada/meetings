@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Main Page</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/index.css') }}">
+    </head>
+    <body>
+        <h1>Welcome Admin!!</h1>
+        <div class="three_elements">
+            <div class="element">
+                <a href="{{ url_for('schedule') }}">Schedule an Interview</a>
+            </div>
+            <div class="element">
+                <a href="{{ url_for('ongoing_interviews') }}">View Ongoing Interviews</a>
+            </div>
+            <div class="element">
+                <a href="{{ url_for('edit') }}">Edit Ongoing Interviews</a>
+            </div>
+        </div>
+    </body>
+</html>

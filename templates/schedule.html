@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Main Page</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/schedule.css') }}">
+    </head>
+    <body>
+        <div>
+                <h2>Select the participants from the list</h2>
+                <div class="checkbox-container">
+                <form action="/schedule" method="POST">
+                    {%for participant in details%}
+                        <label class="label"><input type="checkbox" value="{{participant['p_name']}}" name="name">{{participant['p_name']}}</label>
+                        <br>
+                    {%endfor%}
+                    <input type="submit">
+                </form>
+                </div>                  
+        </div>
+    </body>
+</html>
